@@ -122,7 +122,7 @@ async function proxy(req, res, config, path) {
 
 async function upstreamFetch(config, path, body, headers) {
   if (!config.baseUrl || !config.key) {
-    return new Response(JSON.stringify({ error: { message: "NEW_API_BASE_URL and NEW_API_KEY are required" } }), {
+    return new Response(JSON.stringify({ error: { message: "UPSTREAM_BASE_URL and UPSTREAM_API_KEY are required" } }), {
       status: 500,
       headers: { "content-type": "application/json" },
     });
@@ -234,6 +234,6 @@ function anthropicToResponsesSse(chunk) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   createServer().listen(runtimeConfig.port, () => {
-    console.log(`newapi-protocol-bridge listening on :${runtimeConfig.port}`);
+    console.log(`llm-protocol-bridge listening on :${runtimeConfig.port}`);
   });
 }

@@ -1,12 +1,12 @@
 {
-  "name": "newapi-protocol-bridge",
+  "name": "llm-protocol-bridge",
   "version": "0.1.0",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test",
-    "smoke:new-api": "node test/new-api-smoke.test.js"
+    "smoke:upstream": "node test/upstream-smoke.test.js"
   },
   "engines": {
     "node": ">=20"

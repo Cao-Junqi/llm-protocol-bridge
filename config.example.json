@@ -3,8 +3,8 @@
   "proxy": {
     "apiKey": "sk-proxy-change-me"
   },
-  "newApi": {
+  "upstream": {
     "baseUrl": "http://127.0.0.1:3000",
-    "apiKey": "sk-newapi-change-me"
+    "apiKey": "sk-upstream-change-me"
   }
 }

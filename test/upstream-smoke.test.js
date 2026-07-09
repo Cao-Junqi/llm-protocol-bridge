@@ -1,12 +1,12 @@
 import { once } from "node:events";
 import { createServer } from "../src/server.js";
 
-const baseUrl = process.env.NEW_API_BASE_URL?.replace(/\/$/, "");
-const key = process.env.NEW_API_KEY;
-const model = process.env.NEW_API_TEST_MODEL;
+const baseUrl = (process.env.UPSTREAM_BASE_URL || process.env.NEW_API_BASE_URL)?.replace(/\/$/, "");
+const key = process.env.UPSTREAM_API_KEY || process.env.NEW_API_KEY;
+const model = process.env.UPSTREAM_TEST_MODEL || process.env.NEW_API_TEST_MODEL;
 
 if (!baseUrl || !key || !model) {
-  console.log("skipped: set NEW_API_BASE_URL, NEW_API_KEY, NEW_API_TEST_MODEL");
+  console.log("skipped: set UPSTREAM_BASE_URL, UPSTREAM_API_KEY, UPSTREAM_TEST_MODEL");
   process.exit(0);
 }
 
