@@ -1,5 +1,9 @@
 # LLM Protocol Bridge
 
+[中文文档](./README.zh-CN.md)
+
+> A thin proxy that bridges Anthropic Messages, OpenAI Chat Completions, and OpenAI Responses for any compatible upstream gateway.
+
 LLM Protocol Bridge is a thin front proxy that converts between common LLM API protocols:
 
 - Anthropic Messages

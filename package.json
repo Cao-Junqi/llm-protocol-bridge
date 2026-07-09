@@ -1,11 +1,12 @@
 {
   "name": "llm-protocol-bridge",
   "version": "0.1.0",
+  "description": "A thin proxy that bridges Anthropic Messages, OpenAI Chat Completions, and OpenAI Responses for any compatible upstream gateway.",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "node src/server.js",
-    "test": "node --test",
+    "test": "node --test --test-concurrency=1 test/config.test.js test/proxy.test.js test/upstream-smoke.test.js",
     "smoke:upstream": "node test/upstream-smoke.test.js"
   },
   "engines": {
