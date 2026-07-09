@@ -1,0 +1,10 @@
+services:
+  newapi-protocol-bridge:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      CONFIG_PATH: /app/config.json
+    volumes:
+      - ./config.json:/app/config.json:ro
+    restart: unless-stopped

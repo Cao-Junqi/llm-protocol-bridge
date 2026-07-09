@@ -1,0 +1,10 @@
+{
+  "port": 8787,
+  "proxy": {
+    "apiKey": "sk-proxy-change-me"
+  },
+  "newApi": {
+    "baseUrl": "http://127.0.0.1:3000",
+    "apiKey": "sk-newapi-change-me"
+  }
+}
